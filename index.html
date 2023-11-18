@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Jan-Ken-Pon</title>
+    </head>
+
+    <body>
+        
+        <div id="insere_jogador">
+          <div id="insere_jogador_input">
+            <input type="text" id="insere_jogador_nome" placeholder="Digite o nome do jogador" />
+            <input type="text" id="insere_jogador_avatar" placeholder="Insira um link para a imagem do jogador " />
+          </div>
+            <button onClick="insereJogador()">Adicionar novo Jogador</button>
+            <button onClick="removeTodos()">Remover todos os Jogadores</button>
+        </div>
+
+        <main>
+          <section id="section_tabela">          
+            <table style="width:100%">
+              <thead>
+                <tr>
+                  <th>Avatar</th>
+                  <th>Nome</th>
+                  <th>Vitórias</th>
+                  <th>Empates</th>
+                  <th>Derrotas</th>
+                  <th>Pontos</th>
+                  <th colspan="4">Ações</th>
+                </tr>
+              </thead>
+              <tbody id="tabelaJogadores">
+              </tbody>
+            </table>
+          </section>
+          
+          <section id="jogo">
+            <div class="game-container">
+
+              <h1 id="nome_jogador_1"></h1>
+
+              <div id="choices-player1">
+                <button onclick="playerChoice(1, 'Pedra')">Pedra</button>
+                <button onclick="playerChoice(1, 'Papel')">Papel</button>
+                <button onclick="playerChoice(1, 'Tesoura')">Tesoura</button>
+                <p id="player1-choice" class="jogador_escolheu"></p>
+              </div>
+            </div>
+            
+            <div class="game-container">
+
+              <h1 id="nome_jogador_2"></h1>
+
+              <div id="choices-player2">
+                <button onclick="playerChoice(2, 'Pedra')">Pedra</button>
+                <button onclick="playerChoice(2, 'Papel')">Papel</button>
+                <button onclick="playerChoice(2, 'Tesoura')">Tesoura</button>
+                <p id="player2-choice" class="jogador_escolheu"></p>
+              </div>
+            </div>
+
+          </section>
+
+          <section id="resultado">
+            
+            <div id="result">
+              <h2 id="winner"></h2>    
+            </div>
+            
+          </section>
+        
+        </main>
+
+        <script src="app.js"></script>
+      </body>
+</html>
